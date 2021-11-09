@@ -16,7 +16,11 @@ public class MenuActivity extends AppCompatActivity implements DataPullFinishabl
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.menu_layout);
+    }
 
+    @Override
+    public void onResume(){
+        super.onResume();
         dataRequest = new DataRequest();
         dataRequest.start(this, this);
     }
